@@ -1,4 +1,44 @@
 .backSlideImg {
- background-image: url('/public/images/Asset 5.svg'); 
+ background-image: url('/public/images/Asset 5.svg');
  background-size: cover;
+}
+.bgVideoImgBase{
+ width: 100%;
+ height: 40%;
+ position: absolute;
+ background-image: url('/public/images/Frame\ \(2\).png');
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+.backVideoImg {
+ width: 100%;
+ height: 500px;
+ position: absolute;
+ background-repeat: no-repeat;
+ background-image: url('/public/images/Frame (1).svg');
+ background-size: cover;
+ background-size: 90%;
+ animation: moveImage 15s infinite;
+}
+
+@keyframes moveImage {
+ 0% {
+  transform: translate(0, 0);
+ }
+
+ 25% {
+  transform: translate(0, 50px);
+ }
+
+ 50% {
+  transform: translate(100px, 100px);
+ }
+
+ 75% {
+  transform: translate(50px, 0);
+ }
+
+ 100% {
+  transform: translate(0, 0);
+ }
 }

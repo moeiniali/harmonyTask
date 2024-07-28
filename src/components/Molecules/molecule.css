@@ -1,0 +1,9 @@
+.sectionDiv:hover .inner-div {
+ background-color: #F2B80C;
+ /* رنگ دلخواه برای بک‌گراند در حالت هاور */
+}
+
+.sectionDiv:hover .inner-img {
+ box-shadow: 1px 1px 20px #f2b90c55;
+
+}
