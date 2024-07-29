@@ -11,8 +11,11 @@ type Props = {
 const AtomText = (props: Props) => {
  return (
   <>
-   <p className={props.className}
-    style={{ fontSize: props.size || '14', fontWeight: props.weight || '400', lineHeight: '28px', color: props.color || 'white' }}>
+   <p dir='rtl' className={props.className}
+    style={{
+     fontSize: props.size || '14', fontWeight: props.weight || '400', lineHeight: '28px',
+     color: props.color || 'white',
+    }}>
     {props.children}
    </p>
   </>

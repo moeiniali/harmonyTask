@@ -6,7 +6,10 @@ import MlSection from "./Molecules/MlSection";
 import OrgSlide from "./Organisms/OrgSlide";
 import OrgVideo from "./Organisms/OrgVideo";
 import OrgSection from "./Organisms/OrgSection";
+import OrgFormValidation from "./Organisms/OrgFormValidation";
+import OrgFooter from "./Organisms/OrgFooter";
 import TmMainLayout from "./templates/TmMainLayout";
+
 export {
  AtomText,
  AtomImage,
@@ -15,7 +18,8 @@ export {
  OrgHeader,
  OrgSlide,
  OrgVideo,
+ OrgFooter,
  OrgSection,
-
+ OrgFormValidation,
  TmMainLayout,
 }

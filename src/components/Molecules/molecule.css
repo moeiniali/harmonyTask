@@ -3,7 +3,17 @@
  /* رنگ دلخواه برای بک‌گراند در حالت هاور */
 }
 
+
+
 .sectionDiv:hover .inner-img {
  box-shadow: 1px 1px 20px #f2b90c55;
 
+
+}
+
+@media screen and (min-width:1024px) {
+
+ .sectionDiv:hover .line {
+  display: block;
+ }
 }
