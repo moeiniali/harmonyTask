@@ -1,5 +1,5 @@
 import React from 'react'
-import { OrgHeader, OrgFooter, OrgSlide, OrgVideo, OrgSection, OrgFormValidation } from '../ExAllCo'
+import { OrgHeader, OrgFooter, OrgSlide, OrgVideo, OrgSection, OrgLogin, OrgFormValidation } from '../ExAllCo'
 type Props = {}
 
 const TmMainLayout = (props: Props) => {
@@ -10,6 +10,7 @@ const TmMainLayout = (props: Props) => {
    <OrgVideo />
    <OrgSection />
    <OrgFormValidation />
+   <OrgLogin />
    <OrgFooter />
 
 
