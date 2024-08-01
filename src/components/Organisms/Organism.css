@@ -108,10 +108,9 @@
  background-repeat: no-repeat;
  background-size: cover;
  background-position: center;
- width: calc(100% - 1px); /* عرض کمتر برای فاصله داخلی */
- height: calc(100% - 1px); /* ارتفاع کمتر برای فاصله داخلی */
- padding: 4px; /* فاصله داخلی 4px از هر طرف */
- box-sizing: border-box; /* شامل پدینگ در محاسبات اندازه */
- /* margin: 0 20px 0 20px;  */
+ width: calc(100% - 1px); 
+ height: calc(100% - 1px);
+ padding: 4px; 
+ box-sizing: border-box; 
 
 }
