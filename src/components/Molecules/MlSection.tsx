@@ -17,10 +17,11 @@ type MlSectionTypes = {
   showChildValue?: boolean
 }
 
+// Component definition
 const MlSection: React.FC<MlSectionTypes> = ({ children, src, Element, showChildValue, dropDownChild, id, onClick, onMouseEnter }) => {
 
 
-
+  // Function to handle rendering based on the element type
   const handlerElem = (element: string) => {
 
 
@@ -28,9 +29,10 @@ const MlSection: React.FC<MlSectionTypes> = ({ children, src, Element, showChild
     switch (element) {
       case 'right':
         return (<>
-          <div id={id}  onClick={onClick} className={`sectionDiv transition-all gap-2 w-full h-[100px] lg:hover:scale-95 duration-700 flex items-center justify-between px-4 rounded-md  bg-[#090801] cursor-pointer z-50 `}>
+          {/* Main div for 'right' element */}
+          <div id={id} onMouseEnter={onMouseEnter} onClick={onClick} className={`sectionDiv transition-all gap-2 w-full h-[100px] lg:hover:scale-95 duration-700 flex items-center justify-between px-4 rounded-md  bg-[#090801] cursor-pointer z-50 `}>
             <div className={`inner-div w-[18px] h-[18px] hover:bg-[#F2B80C] ${showChildValue && 'max-md:bg-[#F2B80C]'} rounded-full border border-[#F2B80C]`}></div>
-            <div onMouseEnter={onMouseEnter} className='flex flex-row gap-2 items-center max-lg:flex-row-reverse  ' dir='rtl ' >
+            <div  className='flex flex-row gap-2 items-center max-lg:flex-row-reverse  ' dir='rtl ' >
               <AtomImage src={src} width={40} height={40} className='inner-img ' />
               <AtomText children={children} color='#fff' size="16px" weight='500' />
             </div>
@@ -40,6 +42,7 @@ const MlSection: React.FC<MlSectionTypes> = ({ children, src, Element, showChild
             )}
 
           </div>
+          {/* Conditional rendering for showing child value */}
           {showChildValue && (
             <div className='w-full lg:hidden  h-[415px]  flex flex-col justify-between  bg-[#1936413d] p-2 rounded-lg border border-[#F2B80C]'>
               <AtomText children="contdfsdfsdfsdfsdfent" color='#fff ' size="20px" className='text-right' />
@@ -50,8 +53,9 @@ const MlSection: React.FC<MlSectionTypes> = ({ children, src, Element, showChild
         </>)
       case 'left':
         return (<>
-          <div id={id} onMouseEnter={onMouseEnter}  onClick={onClick} className={`max-lg:flex-row-reverse gap-2 sectionDiv w-full h-[100px] flex-row md:hover:scale-95 duration-700 flex  items-center justify-between px-4 rounded-md  bg-[#090801] cursor-pointer z-50`}>
-            <div  className='flex flex-row gap-2 items-center max-lg:flex-row-reverse  ' dir='rtl'>
+          {/* Main div for 'left' element */}
+          <div id={id} onMouseEnter={onMouseEnter} onClick={onClick} className={`max-lg:flex-row-reverse gap-2 sectionDiv w-full h-[100px] flex-row md:hover:scale-95 duration-700 flex  items-center justify-between px-4 rounded-md  bg-[#090801] cursor-pointer z-50`}>
+            <div className='flex flex-row gap-2 items-center max-lg:flex-row-reverse  ' dir='rtl'>
               <AtomText children={children} color='#fff' size="16px" weight='500' className='text-left' />
               <AtomImage src={src} width={40} height={40} className='inner-img ' />
             </div>
@@ -62,7 +66,7 @@ const MlSection: React.FC<MlSectionTypes> = ({ children, src, Element, showChild
               <div className={`w-[2px] h-[58px]  mt-20 mr-[326px] md:hidden bg-[#F2B80C] absolute  duration-700`}></div>
             )}
           </div>
-
+          {/* Conditional rendering for showing child value */}
           {showChildValue && (
             <div className='w-full lg:hidden  h-[415px]  flex flex-col justify-between  bg-[#1936413d] p-2 rounded-lg border border-[#F2B80C]'>
               <AtomText children="-----------------------------" color='#fff ' size="20px" className='text-right' />
@@ -78,7 +82,7 @@ const MlSection: React.FC<MlSectionTypes> = ({ children, src, Element, showChild
 
   }
 
-
+  // Render the element based on the provided type (default to 'right')
   return (
     <>
       {handlerElem(Element || 'right')}

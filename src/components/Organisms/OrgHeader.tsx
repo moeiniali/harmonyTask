@@ -3,7 +3,7 @@ import { AtomImage, AtomText, AtomButton } from '../ExAllCo'
 type Props = {}
 
 const OrgHeader = (props: Props) => {
-
+ // Function to scroll to the footer
  const scrollToFooter = () => {
   window.scrollTo({
    top: 2600,
@@ -13,7 +13,7 @@ const OrgHeader = (props: Props) => {
 
  return (
   <div className='w-full max-h-[100px] flex flex-row border-b py-1 px-2 justify-around items-center border-b-[#FFD62F] max-md:justify-between'>
-
+   {/* Button to trigger the scroll to footer */}
 
    <AtomButton onClick={scrollToFooter} bgColor='#F50148' children="شروع ترید" radius='20px' color="#fff" padding="10px 16px" />
 
