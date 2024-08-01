@@ -1,16 +1,21 @@
-import React from 'react'
-import { OrgHeader, OrgFooter, OrgSlide, OrgVideo, OrgSection, OrgLogin, OrgFormValidation } from '../ExAllCo'
-type Props = {}
+import React from 'react';
+import { Col } from 'antd'
+import { OrgHeader, OrgFooter, OrgSlide, OrgVideo, OrgSection, OrgLogin, } from '../ExAllCo'
 
-const TmMainLayout = (props: Props) => {
+
+
+
+const TmMainLayout = () => {
  return (
-  <div>
+  <div className='w-full h-auto flex justify-center items-center flex-col'>
+
    <OrgHeader />
    <OrgSlide />
    <OrgVideo />
-   <OrgSection />
-   <OrgFormValidation />
-   <OrgLogin />
+   <Col className='w-full h-auto  flex flex-col justify-center items-center'>
+    <OrgSection />
+    <OrgLogin />
+   </Col>
    <OrgFooter />
 
 
@@ -18,4 +23,4 @@ const TmMainLayout = (props: Props) => {
  )
 }
 
-export default TmMainLayout
+export default TmMainLayout;

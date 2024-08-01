@@ -6,6 +6,7 @@ type Props = {
  children?: any
  className?: string | undefined,
  color?: string | undefined
+ lineHeight?: string | undefined
 }
 
 const AtomText = (props: Props) => {
@@ -13,7 +14,7 @@ const AtomText = (props: Props) => {
   <>
    <p dir='rtl' className={props.className}
     style={{
-     fontSize: props.size || '14', fontWeight: props.weight || '400', lineHeight: '28px',
+     fontSize: props.size || '14', fontWeight: props.weight || '400', lineHeight: props.lineHeight || '28px',
      color: props.color || 'white',
     }}>
     {props.children}

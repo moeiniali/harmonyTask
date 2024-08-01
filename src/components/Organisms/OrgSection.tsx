@@ -40,9 +40,9 @@ const OrgSection = (props: Props) => {
  return (
 
 
-  <div className='w-full h-auto m-auto flex flex-col justify-center items-center px-8 pt-[40px] relative gap-12 top-40'>
+  <div className='sm:w-9/12 w-full  h-auto m-auto flex flex-col justify-center items-center sm:px-8 px-2  pt-[40px] relative gap-12 top-40'>
    <AtomText children="چرا باید در بیدارزپرو معامله کنین؟" color='#F2B80C' size="32px" weight='500' />
-   <div className='w-full h-auto m-auto flex flex-wrap justify-center overflow-x-hidden items-center gap-10 max-lg:gap-2'>
+   <div className='w-full h-auto m-auto flex  max-lg:flex-wrap justify-center overflow-x-hidden items-center gap-10 max-lg:gap-2'>
 
 
     <div className='w-full lg:w-auto flex flex-col gap-2'>
@@ -96,57 +96,7 @@ const OrgSection = (props: Props) => {
 
 
 
-  // <div className=' w-full h-auto  m-auto flex flex-col justify-center items-center pt-[40px] relative gap-12 top-40 '>
-  //  <AtomText children="چرا باید در بیدارزپرو معامله کنین؟ " color='#F2B80C' size="32px" weight='500' />
 
-  //  <div className=' w-full max-h-[450px] m-auto bg-red-600  flex flex-col flex-wrap max-lg:flex-col  justify-center overflow-x-hidden items-center gap-4 max-md:gap-2 '>
-  //   <div className='sectionBgImg absolute ' ></div>
-
-
-  //   {sections.map((section) => (
-  //    <div key={section.id} className='flex flex-col gap-2'>
-  //     <MlSection
-  //      id={section.id}
-  //      onClick={() => handlerClicked(section.id)}
-  //      Element="left"
-  //      children={section.content}
-  //      src={section.src}
-  //     />
-  //     {activeSection === section.id && (
-  //      <div className='w-full  h-[415px] flex flex-col justify-between bg-[#1936413d] p-2 rounded-lg border border-[#F2B80C]'>
-  //       <AtomText children={section.content} color='#fff' size="20px" className='text-right' />
-  //       <AtomImage src='images/transformer 2 1.svg' width={150} height={220} />
-  //      </div>
-  //     )}
-  //    </div>
-  //   ))}
-
-
-
-
-
-  // <div className='flex flex-col gap-2'>
-  //   <MlSection id='1' showChildValue={!showChild} onMouseMove={handlerClicked} onClick={handlerClicked} Element="left" children="تنوع بالای ارز" src='/images/Group 12939.svg' />
-  //   <MlSection id='2' showChildValue={!showChild} onMouseMove={handlerClicked} onClick={handlerClicked} Element="left" children="پشتیبانی از Limit, Stop Limit و Market" src='/images/Group 12926.svg' />
-  //   <MlSection id='3' showChildValue={!showChild} onMouseMove={handlerClicked} onClick={handlerClicked} Element="left" children='پشتیبانی 24 ساعته' src='/images/Group 12930.svg' />
-  //  </div>
-
-  //  <div className='w-72 h-[415px]  max-lg:hidden flex flex-col justify-between  bg-[#1936413d] p-2 rounded-lg border border-[#F2B80C]'>
-  //   <AtomText children={content} color='#fff ' size="20px" className='text-right' />
-  //   <AtomImage src='images/transformer 2 1.svg' width={150} height={220} />
-  //  </div>
-
-
-  //  <div className='flex flex-col gap-2'>
-  //   <MlSection id='4' showChildValue={!showChild} onMouseMove={handlerClicked} onClick={handlerClicked} Element="right" children='اولین پلتفرم P2P  و ترید در یک اکانت' src='/images/Group 12906.png' />
-  //   <MlSection id='5' showChildValue={!showChild} onMouseMove={handlerClicked} onClick={handlerClicked} Element="right" children="امنیت بالا" src="images/Group 12927.svg" />
-  //   <MlSection id='6' showChildValue={!showChild} onMouseMove={handlerClicked} onClick={handlerClicked} Element="right" children="زیر ساخت قوی و سرعت بالا" src="images/Group 12900.svg" />
-  //  </div> 
-
-
-  //  </div>
-
-  // </div >
  )
 }
 
