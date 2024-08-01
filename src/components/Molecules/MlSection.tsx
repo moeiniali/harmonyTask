@@ -7,7 +7,7 @@ import { Collapse } from 'antd';
 
 type MlSectionTypes = {
   onClick?: MouseEventHandler<HTMLDivElement> | undefined;
-  onMouseMove?: React.MouseEventHandler<HTMLDivElement> | undefined;
+  onMouseEnter?: React.MouseEventHandler<HTMLDivElement> | undefined;
   srcCircle?: string
   src?: string
   children?: string
@@ -17,11 +17,9 @@ type MlSectionTypes = {
   showChildValue?: boolean
 }
 
-const MlSection: React.FC<MlSectionTypes> = ({ children, src, Element, showChildValue, dropDownChild, id, onClick, onMouseMove }) => {
-  const [isDropDown, setIsDropDown] = useState<boolean>(false)
+const MlSection: React.FC<MlSectionTypes> = ({ children, src, Element, showChildValue, dropDownChild, id, onClick, onMouseEnter }) => {
 
 
-  console.log(showChildValue);
 
   const handlerElem = (element: string) => {
 
@@ -32,7 +30,7 @@ const MlSection: React.FC<MlSectionTypes> = ({ children, src, Element, showChild
         return (<>
           <div id={id}  onClick={onClick} className={`sectionDiv transition-all gap-2 w-full h-[100px] lg:hover:scale-95 duration-700 flex items-center justify-between px-4 rounded-md  bg-[#090801] cursor-pointer z-50 `}>
             <div className={`inner-div w-[18px] h-[18px] hover:bg-[#F2B80C] ${showChildValue && 'max-md:bg-[#F2B80C]'} rounded-full border border-[#F2B80C]`}></div>
-            <div onMouseLeave={onMouseMove} className='flex flex-row gap-2 items-center max-lg:flex-row-reverse  ' dir='rtl ' >
+            <div onMouseEnter={onMouseEnter} className='flex flex-row gap-2 items-center max-lg:flex-row-reverse  ' dir='rtl ' >
               <AtomImage src={src} width={40} height={40} className='inner-img ' />
               <AtomText children={children} color='#fff' size="16px" weight='500' />
             </div>
@@ -52,7 +50,7 @@ const MlSection: React.FC<MlSectionTypes> = ({ children, src, Element, showChild
         </>)
       case 'left':
         return (<>
-          <div id={id} onMouseLeave={onMouseMove}  onClick={onClick} className={`max-lg:flex-row-reverse gap-2 sectionDiv w-full h-[100px] flex-row md:hover:scale-95 duration-700 flex  items-center justify-between px-4 rounded-md  bg-[#090801] cursor-pointer z-50`}>
+          <div id={id} onMouseEnter={onMouseEnter}  onClick={onClick} className={`max-lg:flex-row-reverse gap-2 sectionDiv w-full h-[100px] flex-row md:hover:scale-95 duration-700 flex  items-center justify-between px-4 rounded-md  bg-[#090801] cursor-pointer z-50`}>
             <div  className='flex flex-row gap-2 items-center max-lg:flex-row-reverse  ' dir='rtl'>
               <AtomText children={children} color='#fff' size="16px" weight='500' className='text-left' />
               <AtomImage src={src} width={40} height={40} className='inner-img ' />

@@ -8,8 +8,9 @@ import OrgVideo from "./Organisms/OrgVideo";
 import OrgSection from "./Organisms/OrgSection";
 import OrgFooter from "./Organisms/OrgFooter";
 import OrgLogin from "./Organisms/OrgLogin";
+import OrgTimer from './Organisms/OrgTimer';
+import OrgModal from "./Organisms/OrgModal";
 import TmMainLayout from "./templates/TmMainLayout";
-
 export {
  AtomText,
  AtomImage,
@@ -20,6 +21,8 @@ export {
  OrgVideo,
  OrgFooter,
  OrgSection,
+ OrgTimer,
+ OrgModal,
  OrgLogin,
  TmMainLayout,
 }

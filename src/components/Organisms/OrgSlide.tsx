@@ -4,6 +4,14 @@ import { AtomText, AtomButton, AtomImage } from '../ExAllCo'
 type Props = {}
 
 const OrgSlide = (props: Props) => {
+
+ 
+ const scrollToFooter = () => {
+  window.scrollTo({
+   top: 2800,
+   behavior: "smooth"
+  })
+ };
  return (
   <div className='backSlideImg w-full h-auto m-auto flex flex-col justify-center items-start pt-[40px] relative gap-12 '>
 
@@ -19,8 +27,8 @@ const OrgSlide = (props: Props) => {
    </div>
 
    <div className='max-w-[720px] h-auto m-auto flex flex-col items-center justify-center  gap-5'>
-    <AtomButton bgColor='#F50148' width='240px' children="شروع ترید" radius='20px' color="#fff" padding="10px 16px" />
-    <AtomImage className=' ' src='/images/Group 12950.svg' width="100%" height="100%" />
+    <AtomButton onClick={scrollToFooter} bgColor='#F50148' width='240px' children="شروع ترید" radius='20px' color="#fff" padding="10px 16px" />
+    <AtomImage  src='/images/Group 12950.svg' width="100%" height="100%" className='animate-pulse'/>
 
    </div>
 
